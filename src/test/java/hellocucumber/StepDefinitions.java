@@ -47,6 +47,11 @@ public class StepDefinitions {
         System.out.println("today is Friday");
         today = "Friday";
     }
+
+    @Given("today is {string}")
+    public void today_is(String day) {
+        this.today = day;
+    }
 }
 
 class IsItFriday {
