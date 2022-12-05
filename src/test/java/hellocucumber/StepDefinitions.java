@@ -42,6 +42,12 @@ public class StepDefinitions {
         System.out.println("I should be told " + expectedAnswer);
         assertEquals(expectedAnswer, actualAnswer);
     }
+
+    @Given("today is Friday")
+    public void today_is_friday() {
+        System.out.println("today is Friday");
+        today = "Friday";
+    }
 }
 
 class IsItFriday {
