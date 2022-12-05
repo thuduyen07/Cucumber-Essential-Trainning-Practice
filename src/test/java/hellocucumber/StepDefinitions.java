@@ -32,8 +32,7 @@ public class StepDefinitions {
     public void i_ask_whether_it_s_friday_yet() {
         // Write code here that turns the phrase above into concrete actions
         System.out.println("I ask whether it's Friday yet");
-        if(IsItFriday.isItFriday(today))
-            actualAnswer = "Yes";
+        actualAnswer = IsItFriday.isItFriday(today);
     }
 
     @Then("I should be told {string}")
@@ -51,7 +50,7 @@ public class StepDefinitions {
 }
 
 class IsItFriday {
-    static boolean isItFriday(String today) {
-        return today.equals("Friday");
+    static String isItFriday(String today) {
+        return today.equals("Friday") ? "Yes" : "Nope";
     }
 }
