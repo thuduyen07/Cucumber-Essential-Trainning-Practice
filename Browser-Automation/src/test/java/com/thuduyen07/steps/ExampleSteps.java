@@ -14,8 +14,8 @@ public class ExampleSteps extends GoogleSearchPage {
     }
 
     public void searchFor(String query){
-        searchElement.sendKeys(query);
-        searchElement.submit();
+        searchElement().sendKeys(query);
+        searchElement().submit();
     }
 
     public void waitForPageLoad(String keyword){

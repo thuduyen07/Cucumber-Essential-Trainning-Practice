@@ -10,7 +10,9 @@ public class GoogleSearchPage {
 
     public final WebDriver driver = new ChromeDriver();
 
-    public WebElement searchElement = driver.findElement(By.name("q"));
+    public WebElement searchElement() {
+        return driver.findElement(By.name("q"));
+    }
 
     public void navigateToGooglePage(){
         driver.get("https://www.google.com/");
